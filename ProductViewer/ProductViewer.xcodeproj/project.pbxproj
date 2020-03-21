@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584F4E0724268FB200AA797E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584F4E0624268FB200AA797E /* NetworkManager.swift */; };
+		585098B6242690AE00FFADA6 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098B5242690AE00FFADA6 /* ProductDetail.swift */; };
+		585098BA2426A39100FFADA6 /* ProductEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098B92426A39100FFADA6 /* ProductEndpoint.swift */; };
+		585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098BB2426A90300FFADA6 /* ResponseMeta.swift */; };
+		585098BE2426ADF700FFADA6 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098BD2426ADF700FFADA6 /* UIImageView+Utils.swift */; };
 		5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CC91D6630E0001D755F /* AppDelegate.swift */; };
 		5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD01D6630E0001D755F /* Assets.xcassets */; };
 		5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		584F4E0624268FB200AA797E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = ../../../../../../../Documents/NetworkManager.swift; sourceTree = "<group>"; };
+		585098B5242690AE00FFADA6 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		585098B92426A39100FFADA6 /* ProductEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndpoint.swift; sourceTree = "<group>"; };
+		585098BB2426A90300FFADA6 /* ResponseMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMeta.swift; sourceTree = "<group>"; };
+		585098BD2426ADF700FFADA6 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		5B259CC61D6630E0001D755F /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B259CC91D6630E0001D755F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B259CD01D6630E0001D755F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +58,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		584F4E0524268F8400AA797E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				584F4E0624268FB200AA797E /* NetworkManager.swift */,
+				585098BB2426A90300FFADA6 /* ResponseMeta.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		585098B32426904400FFADA6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				585098B42426905200FFADA6 /* Model */,
+				585098B92426A39100FFADA6 /* ProductEndpoint.swift */,
+				585098BD2426ADF700FFADA6 /* UIImageView+Utils.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		585098B42426905200FFADA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				585098B5242690AE00FFADA6 /* ProductDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		585098B72426A2B500FFADA6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				585098B82426A2D100FFADA6 /* Product */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		585098B82426A2D100FFADA6 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				585098B32426904400FFADA6 /* Common */,
+				5BEF08101D66328D006BF0C0 /* DetailScreen */,
+				5BEF080F1D663283006BF0C0 /* ListScreen */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		5B259CBD1D6630E0001D755F = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +123,8 @@
 		5B259CC81D6630E0001D755F /* ProductViewer */ = {
 			isa = PBXGroup;
 			children = (
-				5BEF08101D66328D006BF0C0 /* Detail */,
-				5BEF080F1D663283006BF0C0 /* List */,
+				585098B72426A2B500FFADA6 /* Features */,
+				584F4E0524268F8400AA797E /* Core */,
 				5B259CC91D6630E0001D755F /* AppDelegate.swift */,
 				5B259CD01D6630E0001D755F /* Assets.xcassets */,
 				5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */,
@@ -86,7 +141,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BEF080F1D663283006BF0C0 /* List */ = {
+		5BEF080F1D663283006BF0C0 /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
 				5BEF081D1D663573006BF0C0 /* Components */,
@@ -95,14 +150,15 @@
 				5BEF08151D66333C006BF0C0 /* ListViewState.swift */,
 				5B2675A11D674B400015A238 /* ListEvents.swift */,
 			);
-			path = List;
+			path = ListScreen;
 			sourceTree = "<group>";
 		};
-		5BEF08101D66328D006BF0C0 /* Detail */ = {
+		5BEF08101D66328D006BF0C0 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Detail;
+			name = DetailScreen;
+			path = ../../DetailScreen;
 			sourceTree = "<group>";
 		};
 		5BEF081D1D663573006BF0C0 /* Components */ = {
@@ -187,12 +243,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585098BA2426A39100FFADA6 /* ProductEndpoint.swift in Sources */,
 				5BEF08161D66333C006BF0C0 /* ListViewState.swift in Sources */,
+				585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
+				585098B6242690AE00FFADA6 /* ProductDetail.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */,
 				5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */,
+				584F4E0724268FB200AA797E /* NetworkManager.swift in Sources */,
 				5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */,
 				5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */,
+				585098BE2426ADF700FFADA6 /* UIImageView+Utils.swift in Sources */,
 				5B2675A21D674B400015A238 /* ListEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

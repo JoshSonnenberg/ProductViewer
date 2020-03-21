@@ -15,6 +15,8 @@ class ListCoordinator: TempoCoordinator {
     
     // MARK: Presenters, view controllers, view state.
     
+    private let networkManager = NetworkManager()
+    
     var presenters = [TempoPresenterType]() {
         didSet {
             updateUI()
@@ -58,8 +60,27 @@ class ListCoordinator: TempoCoordinator {
     }
     
     func updateState() {
-        viewState.listItems = (1..<10).map { index in
-            ListItemViewState(title: "Puppies!!!", price: "$9.99", image: UIImage(named: "\(index)"))
+        self.networkManager.request(ProductEndpoint.getProducts) {
+            (result: ServiceResult<ResponseMeta<ProductDetail>>) in
+            
+            switch result {
+            case .success(let productResponse):
+                guard let products = productResponse?.data else {
+                    // TODO: Product get no data
+                    return
+                }
+
+                self.viewState.listItems = products.map { index in
+                    guard let imageUrlString = index.image else {
+                        return ListItemViewState(title: index.title ?? "--", price: index.price ?? "--", imageUrl: nil)
+                    }
+
+                    return ListItemViewState(title: index.title ?? "--", price: index.price ?? "--", imageUrl: URL(string: imageUrlString))
+                }
+            case .failure(let error):
+                // TODO: Product List Error Handling
+                print(error)
+            }
         }
     }
 }

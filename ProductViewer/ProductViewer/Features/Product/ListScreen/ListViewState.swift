@@ -20,11 +20,11 @@ struct ListViewState: TempoViewState, TempoSectionedViewState {
 struct ListItemViewState: TempoViewStateItem, Equatable {
     let title: String
     let price: String
-    let image: UIImage?
+    let imageUrl: URL?
 }
 
 func ==(lhs: ListItemViewState, rhs: ListItemViewState) -> Bool {
     return lhs.title == rhs.title
         && lhs.price == rhs.price
-        && lhs.image == rhs.image
+        && lhs.imageUrl == rhs.imageUrl
 }

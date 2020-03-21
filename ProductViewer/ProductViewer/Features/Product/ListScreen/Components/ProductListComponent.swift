@@ -17,7 +17,12 @@ struct ProductListComponent: Component {
     func configureView(_ view: ProductListView, item: ListItemViewState) {
         view.titleLabel.text = item.title
         view.priceLabel.text = item.price
-        view.productImage.image = item.image
+        guard let imageUrl = item.imageUrl else {
+            view.productImage.image = UIImage(named: "1")
+            return
+        }
+        
+        view.productImage.load(url: imageUrl)
     }
     
     func selectView(_ view: ProductListView, item: ListItemViewState) {
