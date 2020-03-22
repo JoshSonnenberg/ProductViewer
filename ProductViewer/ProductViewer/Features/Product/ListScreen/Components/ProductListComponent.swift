@@ -22,7 +22,7 @@ struct ProductListComponent: Component {
             return
         }
         
-        view.productImage.load(url: imageUrl)
+        view.productImage.load(url: imageUrl, key: item.key)
     }
     
     func selectView(_ view: ProductListView, item: ListItemViewState) {

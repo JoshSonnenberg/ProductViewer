@@ -8,20 +8,48 @@
 
 import UIKit
 
+let cache = NSCache<NSString, UIImage>()
+let networkManager = NetworkManager()
+
 extension UIImageView {
     
-    func load(url: URL) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let data = try? Data(contentsOf: url),
-                let image = UIImage(data: data) else {
+    func load(url: URL, key: String) {
+//        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+//            guard let data = try? Data(contentsOf: url),
+//                let image = UIImage(data: data) else {
+//
+//                return
+//            }
+//
+//            DispatchQueue.main.async {
+//                self?.image = image
+//            }
+            guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
+            if let cachedImage = cache.object(forKey: key as NSString) {
+                DispatchQueue.main.async { [weak self] in
+                    self?.image = cachedImage
+                }
+            }
+            networkManager.request(ProductEndpoint.getProductImage(components: components)) { (result: ServiceResult<Data>) in
+
+                
+                
+                DispatchQueue.main.async {
+                                    let image: UIImage?
+                    switch result {
+                    case .success(let data?):
+                        image = UIImage(data: data) ?? UIImage(named: "1")
+                    default:
+                        image = UIImage(named: "1")
+                    }
                     
-                return
+                    guard let imageValue = image else { return }
+                    
+                    cache.setObject(imageValue, forKey: key as NSString)
+                    self.image = imageValue
+                }
             }
-            
-            DispatchQueue.main.async {
-                self?.image = image
-            }
-        }
+//        }
     }
     
 }

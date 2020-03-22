@@ -11,6 +11,7 @@ import Foundation
 enum ProductEndpoint {
     
     case getProducts
+    case getProductImage(components: URLComponents)
     
     // Potential future cases
     // case addToCart(product: Product)
@@ -24,7 +25,7 @@ extension ProductEndpoint: ServiceEndpoint {
     // switching over self gives us compiler checking of future case handling
     var method: ServiceMethod {
         switch self {
-        case .getProducts:
+        case .getProducts, .getProductImage:
             return .get
         }
     }
@@ -33,13 +34,17 @@ extension ProductEndpoint: ServiceEndpoint {
         switch self {
         case .getProducts:
             return "target-deals.herokuapp.com"
+        case .getProductImage(let components):
+            return components.host ?? ""
         }
     }
     
     var relativePath: String {
         switch self {
         case .getProducts:
-            return "api/deals"
+            return "/api/deals"
+        case .getProductImage(let components):
+            return components.path
         }
     }
     

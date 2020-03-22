@@ -19,6 +19,6 @@ extension ProductListView: ReusableNib {
     @nonobjc static let reuseID = "ProductListViewIdentifier"
 
     @nonobjc func prepareForReuse() {
-        
+        productImage.image = nil
     }
 }
