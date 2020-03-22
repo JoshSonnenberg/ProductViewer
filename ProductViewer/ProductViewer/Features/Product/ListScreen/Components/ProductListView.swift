@@ -11,7 +11,7 @@ import Tempo
 final class ProductListView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productImage: NetworkedImageView!
 }
 
 extension ProductListView: ReusableNib {

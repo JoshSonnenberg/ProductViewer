@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="347" height="99"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-Mx-TSZ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-Mx-TSZ" customClass="NetworkedImageView" customModule="ProductViewer" customModuleProvider="target">
                     <rect key="frame" x="5" y="5" width="89" height="89"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Z4l-Mx-TSZ" secondAttribute="height" multiplier="1:1" id="7WG-P7-bew"/>
@@ -28,8 +28,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2If-6a-Iqt">
-                    <rect key="frame" x="104" y="15" width="238" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="104" y="15" width="238" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -56,9 +56,9 @@
                         </label>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-eg-OSn">
-                    <rect key="frame" x="99" y="47.5" width="248" height="1"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-eg-OSn" userLabel="Divider View">
+                    <rect key="frame" x="104" y="47.5" width="243" height="1"/>
+                    <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="l5L-rV-Cru"/>
                     </constraints>
@@ -66,8 +66,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="NZj-eg-OSn" firstAttribute="leading" secondItem="2If-6a-Iqt" secondAttribute="leading" id="3GM-ty-Cni"/>
                 <constraint firstAttribute="trailing" secondItem="0LV-ud-bvA" secondAttribute="trailing" constant="5" id="BfA-Ra-njp"/>
-                <constraint firstItem="NZj-eg-OSn" firstAttribute="leading" secondItem="Z4l-Mx-TSZ" secondAttribute="trailing" constant="5" id="EED-r7-tV3"/>
                 <constraint firstItem="0LV-ud-bvA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dkq-MV-33e" secondAttribute="trailing" constant="5" id="Gmm-Hv-C3Z"/>
                 <constraint firstItem="2If-6a-Iqt" firstAttribute="top" secondItem="Z4l-Mx-TSZ" secondAttribute="top" constant="10" id="R7p-gS-cgm"/>
                 <constraint firstAttribute="trailing" secondItem="NZj-eg-OSn" secondAttribute="trailing" id="VPX-Qw-hD5"/>
@@ -78,10 +78,10 @@
                 <constraint firstItem="NZj-eg-OSn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2If-6a-Iqt" secondAttribute="bottom" constant="5" id="dJv-Mi-20p"/>
                 <constraint firstItem="dkq-MV-33e" firstAttribute="top" secondItem="2If-6a-Iqt" secondAttribute="bottom" constant="8" id="eyE-Xj-wPb"/>
                 <constraint firstItem="Z4l-Mx-TSZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="jOl-sb-ZWX"/>
+                <constraint firstItem="dkq-MV-33e" firstAttribute="leading" secondItem="2If-6a-Iqt" secondAttribute="leading" id="mTV-GL-Q86"/>
                 <constraint firstAttribute="trailing" secondItem="2If-6a-Iqt" secondAttribute="trailing" constant="5" id="op4-r7-e29"/>
                 <constraint firstItem="dkq-MV-33e" firstAttribute="bottom" secondItem="Z4l-Mx-TSZ" secondAttribute="bottom" constant="-10" id="qpf-vj-o9J"/>
                 <constraint firstItem="0LV-ud-bvA" firstAttribute="bottom" secondItem="dkq-MV-33e" secondAttribute="bottom" id="qrZ-tj-CZr"/>
-                <constraint firstItem="dkq-MV-33e" firstAttribute="leading" secondItem="Z4l-Mx-TSZ" secondAttribute="trailing" constant="10" id="wjO-yO-0yV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

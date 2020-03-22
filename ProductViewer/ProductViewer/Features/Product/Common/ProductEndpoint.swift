@@ -23,7 +23,7 @@ enum ProductEndpoint {
 extension ProductEndpoint: ServiceEndpoint {
     
     // switching over self gives us compiler checking of future case handling
-    var method: ServiceMethod {
+    var serviceMethod: ServiceMethod {
         switch self {
         case .getProducts, .getProductImage:
             return .get
@@ -39,7 +39,7 @@ extension ProductEndpoint: ServiceEndpoint {
         }
     }
     
-    var relativePath: String {
+    var relativeUrlPath: String {
         switch self {
         case .getProducts:
             return "/api/deals"
