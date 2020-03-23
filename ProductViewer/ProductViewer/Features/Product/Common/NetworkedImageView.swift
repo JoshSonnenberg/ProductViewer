@@ -26,22 +26,22 @@ class NetworkedImageView: UIImageView {
         
         NetworkedImageView.networkManager.request(ProductEndpoint.getProductImage(components: components)) { (result: ServiceResult<Data>) in
             
-                DispatchQueue.main.async {
-                    let image: UIImage?
-                    
-                    switch result {
-                    case .success(let data?):
-                        image = UIImage(data: data) ?? UIImage(named: "3")
-                    default:
-                        image = UIImage(named: "1")
-                    }
-                    
-                    guard let imageValue = image else { return }
-                    
-                    NetworkedImageView.cache.setObject(imageValue, forKey: key as NSString)
-                    self.image = imageValue
+            DispatchQueue.main.async {
+                let image: UIImage?
+                
+                switch result {
+                case .success(let data?):
+                    image = UIImage(data: data) ?? UIImage(named: "3")
+                default:
+                    image = UIImage(named: "1")
                 }
+                
+                guard let imageValue = image else { return }
+                
+                NetworkedImageView.cache.setObject(imageValue, forKey: key as NSString)
+                self.image = imageValue
             }
+        }
     }
     
 }

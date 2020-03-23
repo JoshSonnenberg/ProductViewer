@@ -12,6 +12,9 @@
 		585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098BB2426A90300FFADA6 /* ResponseMeta.swift */; };
 		585D86A32427F14C003271E0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D86A22427F14C003271E0 /* NetworkManager.swift */; };
 		585D86A52427FB1B003271E0 /* NetworkedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D86A42427FB1B003271E0 /* NetworkedImageView.swift */; };
+		585D86A7242817C4003271E0 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D86A6242817C4003271E0 /* NibLoadable.swift */; };
+		585D86A924281D59003271E0 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D86A824281D59003271E0 /* UIView+Utils.swift */; };
+		585D86AB24282097003271E0 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D86AA24282097003271E0 /* UIColor+Utils.swift */; };
 		5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CC91D6630E0001D755F /* AppDelegate.swift */; };
 		5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD01D6630E0001D755F /* Assets.xcassets */; };
 		5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */; };
@@ -31,6 +34,9 @@
 		585098BB2426A90300FFADA6 /* ResponseMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMeta.swift; sourceTree = "<group>"; };
 		585D86A22427F14C003271E0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		585D86A42427FB1B003271E0 /* NetworkedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkedImageView.swift; sourceTree = "<group>"; };
+		585D86A6242817C4003271E0 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		585D86A824281D59003271E0 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		585D86AA24282097003271E0 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		5B259CC61D6630E0001D755F /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B259CC91D6630E0001D755F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B259CD01D6630E0001D755F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 			children = (
 				585098BB2426A90300FFADA6 /* ResponseMeta.swift */,
 				585D86A22427F14C003271E0 /* NetworkManager.swift */,
+				585D86A6242817C4003271E0 /* NibLoadable.swift */,
+				585D86A824281D59003271E0 /* UIView+Utils.swift */,
+				585D86AA24282097003271E0 /* UIColor+Utils.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -243,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585D86AB24282097003271E0 /* UIColor+Utils.swift in Sources */,
 				585098BA2426A39100FFADA6 /* ProductEndpoint.swift in Sources */,
 				5BEF08161D66333C006BF0C0 /* ListViewState.swift in Sources */,
+				585D86A924281D59003271E0 /* UIView+Utils.swift in Sources */,
 				585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
 				585D86A32427F14C003271E0 /* NetworkManager.swift in Sources */,
@@ -254,6 +265,7 @@
 				5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */,
 				5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */,
 				585D86A52427FB1B003271E0 /* NetworkedImageView.swift in Sources */,
+				585D86A7242817C4003271E0 /* NibLoadable.swift in Sources */,
 				5B2675A21D674B400015A238 /* ListEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

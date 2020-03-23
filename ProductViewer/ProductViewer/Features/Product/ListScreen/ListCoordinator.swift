@@ -72,10 +72,18 @@ class ListCoordinator: TempoCoordinator {
 
                 self.viewState.listItems = products.map { index in
                     guard let imageUrlString = index.image else {
-                        return ListItemViewState(title: index.title ?? "--", price: index.price ?? "--", imageUrl: nil, key: index._id ?? "")
+                        return ListItemViewState(title: index.title ?? "--",
+                                                 price: index.price ?? "--",
+                                                 imageUrl: nil,
+                                                 key: index._id ?? "",
+                                                 aisleCopy: index.aisle ?? "")
                     }
 
-                    return ListItemViewState(title: index.title ?? "--", price: index.price ?? "--", imageUrl: URL(string: imageUrlString), key: index._id ?? "")
+                    return ListItemViewState(title: index.title ?? "--",
+                                             price: index.price ?? "--",
+                                             imageUrl: URL(string: imageUrlString),
+                                             key: index._id ?? "",
+                                             aisleCopy: index.aisle ?? "")
                 }
             case .failure(let error):
                 // TODO: Product List Error Handling
