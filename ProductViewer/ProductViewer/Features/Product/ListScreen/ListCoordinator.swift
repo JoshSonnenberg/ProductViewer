@@ -16,6 +16,8 @@ class ListCoordinator: TempoCoordinator {
     // MARK: Presenters, view controllers, view state.
     
     private let networkManager = NetworkManager()
+    private weak var navigationPresenter: UINavigationController?
+    private lazy var detailCoordinator = DetailCoordinator()
     
     var presenters = [TempoPresenterType]() {
         didSet {
@@ -51,11 +53,15 @@ class ListCoordinator: TempoCoordinator {
     
     // MARK: ListCoordinator
     
+    func start(navigationPresenter: UINavigationController) {
+        self.navigationPresenter = navigationPresenter
+        self.navigationPresenter?.setViewControllers([self.viewController], animated: true)
+    }
+    
     fileprivate func registerListeners() {
         dispatcher.addObserver(ListItemPressed.self) { [weak self] e in
-            let alert = UIAlertController(title: "Item selected!", message: "🐶", preferredStyle: .alert)
-            alert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: nil) )
-            self?.viewController.present(alert, animated: true, completion: nil)
+            guard let nav = self?.navigationPresenter else { return }
+            self?.detailCoordinator.start(navigationPresenter: nav, state: DetailItemViewState(productImage: e.image, price: e.listItem.price, description: e.listItem.description))
         }
     }
     
@@ -76,14 +82,16 @@ class ListCoordinator: TempoCoordinator {
                                                  price: index.price ?? "--",
                                                  imageUrl: nil,
                                                  key: index._id ?? "",
-                                                 aisleCopy: index.aisle ?? "")
+                                                 aisleCopy: index.aisle ?? "",
+                                                 description: index.description ?? "--")
                     }
 
                     return ListItemViewState(title: index.title ?? "--",
                                              price: index.price ?? "--",
                                              imageUrl: URL(string: imageUrlString),
                                              key: index._id ?? "",
-                                             aisleCopy: index.aisle ?? "")
+                                             aisleCopy: index.aisle ?? "",
+                                             description: index.description ?? "--")
                 }
             case .failure(let error):
                 // TODO: Product List Error Handling

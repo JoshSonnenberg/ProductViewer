@@ -31,15 +31,15 @@ class NetworkedImageView: UIImageView {
                 
                 switch result {
                 case .success(let data?):
-                    image = UIImage(data: data) ?? UIImage(named: "3")
+                    image = UIImage(data: data)
+                    guard let imageValue = image else { break }
+                    
+                    NetworkedImageView.cache.setObject(imageValue, forKey: key as NSString)
                 default:
                     image = UIImage(named: "1")
                 }
                 
-                guard let imageValue = image else { return }
-                
-                NetworkedImageView.cache.setObject(imageValue, forKey: key as NSString)
-                self.image = imageValue
+                self.image = image ?? UIImage(named: "3")
             }
         }
     }

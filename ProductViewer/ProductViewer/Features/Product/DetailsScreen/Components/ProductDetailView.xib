@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductDetailView" customModule="ProductViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="711"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMn-dr-tlr">
+                    <rect key="frame" x="0.0" y="0.0" width="397" height="397"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cMn-dr-tlr" secondAttribute="height" multiplier="1:1" id="U3Z-t8-zI3"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5n-QS-QrG">
+                    <rect key="frame" x="10" y="407" width="377" height="37"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Detail Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy1-ol-gR3">
+                    <rect key="frame" x="10" y="452" width="377" height="127.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As0-VU-SEZ">
+                    <rect key="frame" x="10" y="619" width="377" height="36"/>
+                    <color key="backgroundColor" red="0.74509803921568629" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Primary Button">
+                        <color key="titleColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeW-dp-d3o">
+                    <rect key="frame" x="10" y="665" width="377" height="36"/>
+                    <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Secondary Button">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HeW-dp-d3o" firstAttribute="trailing" secondItem="As0-VU-SEZ" secondAttribute="trailing" id="1fF-Gg-Yip"/>
+                <constraint firstItem="cMn-dr-tlr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8nj-X2-Zub"/>
+                <constraint firstItem="HeW-dp-d3o" firstAttribute="top" secondItem="As0-VU-SEZ" secondAttribute="bottom" constant="10" id="JrD-v6-SUy"/>
+                <constraint firstItem="As0-VU-SEZ" firstAttribute="leading" secondItem="yy1-ol-gR3" secondAttribute="leading" id="McW-Oc-Ssp"/>
+                <constraint firstAttribute="bottom" secondItem="HeW-dp-d3o" secondAttribute="bottom" constant="10" id="NaB-Bh-aLG"/>
+                <constraint firstItem="yy1-ol-gR3" firstAttribute="leading" secondItem="e5n-QS-QrG" secondAttribute="leading" id="NuG-lg-aA2"/>
+                <constraint firstAttribute="trailing" secondItem="e5n-QS-QrG" secondAttribute="trailing" constant="10" id="O00-w6-xnm"/>
+                <constraint firstItem="e5n-QS-QrG" firstAttribute="top" secondItem="cMn-dr-tlr" secondAttribute="bottom" constant="10" id="O4j-DQ-OGF"/>
+                <constraint firstItem="cMn-dr-tlr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UB3-nZ-oAr"/>
+                <constraint firstAttribute="trailing" secondItem="cMn-dr-tlr" secondAttribute="trailing" id="VGy-f2-JgR"/>
+                <constraint firstItem="yy1-ol-gR3" firstAttribute="top" secondItem="e5n-QS-QrG" secondAttribute="bottom" constant="8" id="dJ2-vA-wxd"/>
+                <constraint firstItem="yy1-ol-gR3" firstAttribute="trailing" secondItem="e5n-QS-QrG" secondAttribute="trailing" id="dXi-G4-4cN"/>
+                <constraint firstItem="HeW-dp-d3o" firstAttribute="leading" secondItem="As0-VU-SEZ" secondAttribute="leading" id="hJw-IH-8pJ"/>
+                <constraint firstItem="As0-VU-SEZ" firstAttribute="top" secondItem="yy1-ol-gR3" secondAttribute="bottom" constant="39.5" id="nfK-rJ-ROK"/>
+                <constraint firstItem="e5n-QS-QrG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="tt6-Eg-qgm"/>
+                <constraint firstItem="As0-VU-SEZ" firstAttribute="trailing" secondItem="yy1-ol-gR3" secondAttribute="trailing" id="wib-Ey-lem"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailLabel" destination="yy1-ol-gR3" id="4BB-75-zSF"/>
+                <outlet property="priceLabel" destination="e5n-QS-QrG" id="LHA-mo-4D2"/>
+                <outlet property="primaryButton" destination="As0-VU-SEZ" id="Tl0-Bn-BSM"/>
+                <outlet property="productImageView" destination="cMn-dr-tlr" id="0tP-bS-hev"/>
+                <outlet property="secondaryButton" destination="HeW-dp-d3o" id="Lkd-iw-FfX"/>
+            </connections>
+            <point key="canvasLocation" x="106.5217391304348" y="80.691964285714278"/>
+        </view>
+    </objects>
+</document>

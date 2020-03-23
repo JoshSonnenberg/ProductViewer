@@ -7,4 +7,9 @@
 
 import Tempo
 
-struct ListItemPressed: EventType {}
+struct ListItemPressed: EventType {
+    
+    let listItem: ListItemViewState
+    let image: UIImage?
+    
+}

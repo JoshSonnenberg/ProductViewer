@@ -29,7 +29,7 @@ struct ProductListComponent: Component {
     }
     
     func selectView(_ view: ProductListView, item: ListItemViewState) {
-        dispatcher?.triggerEvent(ListItemPressed())
+        dispatcher?.triggerEvent(ListItemPressed(listItem: item, image: view.productImage.image))
     }
 }
 
@@ -38,6 +38,9 @@ extension ProductListComponent: HarmonyLayoutComponent {
         guard let state = item as? ListItemViewState else { return 100.0 }
         
         self.configureView(sizingView, item: state)
+        
+        self.sizingView.bounds = CGRect(x: 0.0, y: 0.0, width: width, height: sizingView.bounds.height)
+        self.sizingView.layoutIfNeeded()
         
         return sizingView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }

@@ -22,7 +22,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-MV-33e">
-                    <rect key="frame" x="143" y="154.5" width="198.5" height="20.5"/>
+                    <rect key="frame" x="143" y="126.5" width="198.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -86,15 +86,15 @@
                 <constraint firstAttribute="trailing" secondItem="NZj-eg-OSn" secondAttribute="trailing" id="VPX-Qw-hD5"/>
                 <constraint firstItem="Z4l-Mx-TSZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="YO9-xc-FrA"/>
                 <constraint firstItem="0LV-ud-bvA" firstAttribute="top" secondItem="NZj-eg-OSn" secondAttribute="bottom" constant="15" id="YtN-KU-XP0"/>
-                <constraint firstAttribute="bottom" secondItem="dkq-MV-33e" secondAttribute="bottom" constant="15" id="Zc0-Hp-cHJ"/>
                 <constraint firstItem="Z4l-Mx-TSZ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/4" id="bYF-gG-6Mp"/>
                 <constraint firstItem="2If-6a-Iqt" firstAttribute="leading" secondItem="Z4l-Mx-TSZ" secondAttribute="trailing" constant="10" id="cVI-9P-MM9"/>
                 <constraint firstItem="NZj-eg-OSn" firstAttribute="top" secondItem="2If-6a-Iqt" secondAttribute="bottom" constant="5" id="dJv-Mi-20p"/>
                 <constraint firstItem="dkq-MV-33e" firstAttribute="top" secondItem="2If-6a-Iqt" secondAttribute="bottom" constant="8" id="eyE-Xj-wPb"/>
-                <constraint firstItem="0LV-ud-bvA" firstAttribute="bottom" secondItem="dkq-MV-33e" secondAttribute="bottom" id="mBo-F3-2Fe"/>
                 <constraint firstItem="dkq-MV-33e" firstAttribute="leading" secondItem="2If-6a-Iqt" secondAttribute="leading" id="mTV-GL-Q86"/>
+                <constraint firstItem="dkq-MV-33e" firstAttribute="centerY" secondItem="0LV-ud-bvA" secondAttribute="centerY" id="nJN-jt-9Z3"/>
                 <constraint firstAttribute="trailing" secondItem="2If-6a-Iqt" secondAttribute="trailing" constant="10" id="op4-r7-e29"/>
                 <constraint firstItem="Z4l-Mx-TSZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rod-CQ-Hh7"/>
+                <constraint firstAttribute="bottom" secondItem="0LV-ud-bvA" secondAttribute="bottom" constant="15" id="yNe-8T-QLa"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

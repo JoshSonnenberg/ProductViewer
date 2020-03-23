@@ -1,17 +1,18 @@
 //
-//  ListViewController.swift
+//  DetailViewController.swift
 //  ProductViewer
 //
-//  Copyright © 2016 Target. All rights reserved.
+//  Created by Josh Sonnenberg on 3/23/20.
+//  Copyright © 2020 Target. All rights reserved.
 //
 
 import UIKit
 import Tempo
 
-class ListViewController: UIViewController {
-    
-    class func viewControllerFor(coordinator: TempoCoordinator) -> ListViewController {
-        let viewController = ListViewController()
+class DetailViewController: UIViewController {
+
+    class func viewControllerFor(coordinator: TempoCoordinator) -> DetailViewController {
+        let viewController = DetailViewController()
         viewController.coordinator = coordinator
         
         return viewController
@@ -26,7 +27,7 @@ class ListViewController: UIViewController {
         harmonyLayout.defaultSectionMargins = HarmonyLayoutMargins(top: .narrow, right: .none, bottom: .none, left: .none)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: harmonyLayout)
-        collectionView.backgroundColor = .targetFadeAwayGrayColor
+        collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
         
@@ -35,14 +36,14 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.addAndPinSubview(collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
         
-        title = "Products"
+        title = "Product Detail"
         
         let components: [ComponentType] = [
-            ProductListComponent()
+            DetailComponent()
         ]
         
         let componentProvider = ComponentProvider(components: components, dispatcher: coordinator.dispatcher)
@@ -51,12 +52,7 @@ class ListViewController: UIViewController {
         coordinator.presenters = [
             SectionPresenter(adapter: collectionViewAdapter),
         ]
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
     }
-    
-}
 
+}

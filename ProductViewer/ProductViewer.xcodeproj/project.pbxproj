@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584D14772429190A00FBF1C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D14762429190A00FBF1C3 /* DetailViewController.swift */; };
+		584D1479242919B500FBF1C3 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D1478242919B500FBF1C3 /* DetailCoordinator.swift */; };
+		584D147B24291BDF00FBF1C3 /* DetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D147A24291BDF00FBF1C3 /* DetailViewState.swift */; };
+		584D147E242923FB00FBF1C3 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D147D242923FB00FBF1C3 /* ProductDetailView.swift */; };
+		584D14802429241700FBF1C3 /* ProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584D147F2429241700FBF1C3 /* ProductDetailView.xib */; };
+		584D148424292A7E00FBF1C3 /* DetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D148324292A7E00FBF1C3 /* DetailComponent.swift */; };
 		585098B6242690AE00FFADA6 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098B5242690AE00FFADA6 /* ProductDetail.swift */; };
 		585098BA2426A39100FFADA6 /* ProductEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098B92426A39100FFADA6 /* ProductEndpoint.swift */; };
 		585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585098BB2426A90300FFADA6 /* ResponseMeta.swift */; };
@@ -29,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		584D14762429190A00FBF1C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		584D1478242919B500FBF1C3 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		584D147A24291BDF00FBF1C3 /* DetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewState.swift; sourceTree = "<group>"; };
+		584D147D242923FB00FBF1C3 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		584D147F2429241700FBF1C3 /* ProductDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailView.xib; sourceTree = "<group>"; };
+		584D148324292A7E00FBF1C3 /* DetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComponent.swift; sourceTree = "<group>"; };
 		585098B5242690AE00FFADA6 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		585098B92426A39100FFADA6 /* ProductEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndpoint.swift; sourceTree = "<group>"; };
 		585098BB2426A90300FFADA6 /* ResponseMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMeta.swift; sourceTree = "<group>"; };
@@ -64,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		584D147C2429238F00FBF1C3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				584D147D242923FB00FBF1C3 /* ProductDetailView.swift */,
+				584D147F2429241700FBF1C3 /* ProductDetailView.xib */,
+				584D148324292A7E00FBF1C3 /* DetailComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		584F4E0524268F8400AA797E /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,10 @@
 		5BEF08101D66328D006BF0C0 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
+				584D147C2429238F00FBF1C3 /* Components */,
+				584D14762429190A00FBF1C3 /* DetailViewController.swift */,
+				584D1478242919B500FBF1C3 /* DetailCoordinator.swift */,
+				584D147A24291BDF00FBF1C3 /* DetailViewState.swift */,
 			);
 			name = DetailScreen;
 			path = DetailsScreen;
@@ -240,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */,
+				584D14802429241700FBF1C3 /* ProductDetailView.xib in Resources */,
 				5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */,
 				5BEF08211D6635B2006BF0C0 /* ProductListView.xib in Resources */,
 			);
@@ -254,15 +281,20 @@
 			files = (
 				585D86AB24282097003271E0 /* UIColor+Utils.swift in Sources */,
 				585098BA2426A39100FFADA6 /* ProductEndpoint.swift in Sources */,
+				584D148424292A7E00FBF1C3 /* DetailComponent.swift in Sources */,
 				5BEF08161D66333C006BF0C0 /* ListViewState.swift in Sources */,
 				585D86A924281D59003271E0 /* UIView+Utils.swift in Sources */,
 				585098BC2426A90300FFADA6 /* ResponseMeta.swift in Sources */,
+				584D147E242923FB00FBF1C3 /* ProductDetailView.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
 				585D86A32427F14C003271E0 /* NetworkManager.swift in Sources */,
+				584D14772429190A00FBF1C3 /* DetailViewController.swift in Sources */,
 				585098B6242690AE00FFADA6 /* ProductDetail.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* ProductListView.swift in Sources */,
 				5B302A8F1D663A8500FA2FFD /* ProductListComponent.swift in Sources */,
+				584D147B24291BDF00FBF1C3 /* DetailViewState.swift in Sources */,
 				5BEF08141D663304006BF0C0 /* ListViewController.swift in Sources */,
+				584D1479242919B500FBF1C3 /* DetailCoordinator.swift in Sources */,
 				5BEF08121D6632EC006BF0C0 /* ListCoordinator.swift in Sources */,
 				585D86A52427FB1B003271E0 /* NetworkedImageView.swift in Sources */,
 				585D86A7242817C4003271E0 /* NibLoadable.swift in Sources */,

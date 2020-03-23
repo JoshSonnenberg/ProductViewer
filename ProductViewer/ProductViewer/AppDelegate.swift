@@ -11,13 +11,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let listCoordinator = ListCoordinator()
+    lazy var listCoordinator = ListCoordinator()
+    let presenter = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = listCoordinator.viewController
+        window?.rootViewController = presenter 
         window?.makeKeyAndVisible()
+        
+        listCoordinator.start(navigationPresenter: presenter)
         
         return true
     }
