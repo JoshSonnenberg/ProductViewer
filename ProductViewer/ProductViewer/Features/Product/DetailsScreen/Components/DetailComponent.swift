@@ -14,10 +14,6 @@ struct DetailComponent: Component {
     
     private var sizingView = ProductDetailView.fromNib
     
-    func prepareView(_ view: ProductDetailView, item: DetailItemViewState) { }
-    
-    func selectView(_ view: ProductDetailView, item: DetailItemViewState) { }
-    
     func configureView(_ view: ProductDetailView, item: DetailItemViewState) {
         view.productImageView.image = item.productImage
         view.priceLabel.text = item.price

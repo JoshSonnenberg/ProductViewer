@@ -52,8 +52,6 @@ class DetailCoordinator: TempoCoordinator {
         self.viewState.listItems = [state]
     }
     
-    fileprivate func registerListeners() {
-
-    }
+    fileprivate func registerListeners() { }
 
 }

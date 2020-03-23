@@ -88,6 +88,10 @@ Easy enough, but the `SectionPresenter` still needs to know how to configure the
 That's where components come in. A section presenter uses its registered components to update individual cells within a given section.  Simply subclass `Component` and implement `configureView(view:item:)` with the corresponding generic parameter types and most of the boilerplate is handled for you. 
 */
 final class MyView: UIView, Reusable {
+    
+    @nonobjc func prepareForReuse() {
+        
+    }
     @nonobjc static let reuseID: String = "🍌"
     fileprivate lazy var myLabel: UILabel = {
         let label = UILabel()

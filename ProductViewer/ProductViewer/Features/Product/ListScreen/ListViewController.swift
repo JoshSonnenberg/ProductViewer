@@ -51,11 +51,6 @@ class ListViewController: UIViewController {
         coordinator.presenters = [
             SectionPresenter(adapter: collectionViewAdapter),
         ]
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     
 }

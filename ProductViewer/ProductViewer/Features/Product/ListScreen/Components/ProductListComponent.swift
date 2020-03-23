@@ -8,6 +8,7 @@
 import Tempo
 
 struct ProductListComponent: Component {
+    
     var dispatcher: Dispatcher?
     
     private var sizingView = ProductListView.fromNib
@@ -31,9 +32,11 @@ struct ProductListComponent: Component {
     func selectView(_ view: ProductListView, item: ListItemViewState) {
         dispatcher?.triggerEvent(ListItemPressed(listItem: item, image: view.productImage.image))
     }
+    
 }
 
 extension ProductListComponent: HarmonyLayoutComponent {
+    
     func heightForLayout(_ layout: HarmonyLayout, item: TempoViewStateItem, width: CGFloat) -> CGFloat {
         guard let state = item as? ListItemViewState else { return 100.0 }
         
@@ -44,4 +47,5 @@ extension ProductListComponent: HarmonyLayoutComponent {
         
         return sizingView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }
+    
 }
