@@ -28,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Detail Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy1-ol-gR3">
-                    <rect key="frame" x="10" y="452" width="377" height="127.5"/>
+                    <rect key="frame" x="10" y="452" width="377" height="157"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                 <constraint firstItem="yy1-ol-gR3" firstAttribute="top" secondItem="e5n-QS-QrG" secondAttribute="bottom" constant="8" id="dJ2-vA-wxd"/>
                 <constraint firstItem="yy1-ol-gR3" firstAttribute="trailing" secondItem="e5n-QS-QrG" secondAttribute="trailing" id="dXi-G4-4cN"/>
                 <constraint firstItem="HeW-dp-d3o" firstAttribute="leading" secondItem="As0-VU-SEZ" secondAttribute="leading" id="hJw-IH-8pJ"/>
-                <constraint firstItem="As0-VU-SEZ" firstAttribute="top" secondItem="yy1-ol-gR3" secondAttribute="bottom" constant="39.5" id="nfK-rJ-ROK"/>
+                <constraint firstItem="As0-VU-SEZ" firstAttribute="top" secondItem="yy1-ol-gR3" secondAttribute="bottom" constant="10" id="nfK-rJ-ROK"/>
                 <constraint firstItem="e5n-QS-QrG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="tt6-Eg-qgm"/>
                 <constraint firstItem="As0-VU-SEZ" firstAttribute="trailing" secondItem="yy1-ol-gR3" secondAttribute="trailing" id="wib-Ey-lem"/>
             </constraints>

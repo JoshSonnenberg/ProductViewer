@@ -22,15 +22,15 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-MV-33e">
-                    <rect key="frame" x="143" y="126.5" width="198.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="143" y="123.5" width="198.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2If-6a-Iqt">
                     <rect key="frame" x="143" y="15" width="338" height="62.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0LV-ud-bvA">
@@ -39,7 +39,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-y2-Xhh">
                             <rect key="frame" x="0.0" y="0.0" width="32" height="76.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-AL-Tlz">
@@ -52,19 +52,19 @@
                             <rect key="frame" x="58" y="0.0" width="76.5" height="76.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" text="Aisle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2N-Aa-e1v">
-                                    <rect key="frame" x="4" y="4" width="68.5" height="68.5"/>
+                                    <rect key="frame" x="6" y="6" width="64.5" height="64.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.74509803921568629" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="T2N-Aa-e1v" secondAttribute="trailing" constant="4" id="I4Y-d8-evI"/>
+                                <constraint firstAttribute="trailing" secondItem="T2N-Aa-e1v" secondAttribute="trailing" constant="6" id="I4Y-d8-evI"/>
                                 <constraint firstAttribute="width" secondItem="5cu-ax-miK" secondAttribute="height" multiplier="1:1" id="WdE-Rk-9SG"/>
-                                <constraint firstItem="T2N-Aa-e1v" firstAttribute="leading" secondItem="5cu-ax-miK" secondAttribute="leading" constant="4" id="fbz-yx-yFo"/>
-                                <constraint firstAttribute="bottom" secondItem="T2N-Aa-e1v" secondAttribute="bottom" constant="4" id="hBh-ZR-vAo"/>
-                                <constraint firstItem="T2N-Aa-e1v" firstAttribute="top" secondItem="5cu-ax-miK" secondAttribute="top" constant="4" id="sXl-O7-06O"/>
+                                <constraint firstItem="T2N-Aa-e1v" firstAttribute="leading" secondItem="5cu-ax-miK" secondAttribute="leading" constant="6" id="fbz-yx-yFo"/>
+                                <constraint firstAttribute="bottom" secondItem="T2N-Aa-e1v" secondAttribute="bottom" constant="6" id="hBh-ZR-vAo"/>
+                                <constraint firstItem="T2N-Aa-e1v" firstAttribute="top" secondItem="5cu-ax-miK" secondAttribute="top" constant="6" id="sXl-O7-06O"/>
                             </constraints>
                         </view>
                     </subviews>
