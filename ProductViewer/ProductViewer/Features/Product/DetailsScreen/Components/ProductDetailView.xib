@@ -22,13 +22,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5n-QS-QrG">
-                    <rect key="frame" x="10" y="407" width="377" height="37"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                    <rect key="frame" x="10" y="407" width="377" height="41"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Detail Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy1-ol-gR3">
-                    <rect key="frame" x="10" y="452" width="377" height="157"/>
+                    <rect key="frame" x="10" y="456" width="377" height="153"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
